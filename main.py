@@ -10,7 +10,7 @@ from sklearn.metrics import ConfusionMatrixDisplay
 from sklearn.model_selection import train_test_split, cross_validate
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 
-
+# Global counter for figure enumeration
 i = 0
 
 
