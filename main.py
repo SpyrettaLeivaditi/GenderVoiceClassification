@@ -19,7 +19,7 @@ def confusion_matrix_scorer(model, x, y):
     :param model: the classifier
     :param x: features
     :param y: labels
-    :return: I return the beloved 42, just to return the proper data type
+    :return: I return the beloved 42, just to return the proper data type (else we get error)
     """
     ConfusionMatrixDisplay.from_estimator(model, x, y)
     global i
@@ -35,7 +35,6 @@ features = data.iloc[:, :-1]
 labels = data.iloc[:, 20]
 
 # Plot of all data correlation matrix
-plt.figure(figsize=(40, 40))
 sns.heatmap(data.corr(), annot=True, cmap='RdYlGn')
 
 # Encode string classes into numbers
