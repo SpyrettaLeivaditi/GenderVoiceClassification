@@ -60,8 +60,8 @@ In our code, we execute the following workflow:
 - First we read the data from a csv file and split them into features and labels.
 - Then we plot a data correlation matrix, in the form of a heatmap, that shows the pairwise correlation between the different columns of the data.
 - Then, we encode the string labels (male and female) into numbers (0 for female, 1 for male). 
-- Then, we normalize the feature values to the range [0,1]  using a MinMax scaler. This is necessary as the different features have different ranges that may affect negatively the classifier.
-- Then, we splits the data into train and test sets, with the train set consisting of 80% of the data and the test one of 20%. This splitting is random in very run.
+- Then, we normalize the feature values to the range [0,1]  using a MinMax scaler. This is necessary as the different features have different ranges that may negatively affect  the classifier.
+- Then, we split the data into train and test sets, with the train set consisting of 80% of the data and the test one of 20%. This splitting is random in every run.
 - Then, we initialize a Logistic Regression model.
 - Then, we define the scoring metrics that we want to evaluate the model with. These are accuracy, precision, recall, F1, and confusion matrix.
 - Then we run and evaluate the classification model by performing a 10-fold cross-validation. We use cross-validation to ensure our evaluation is not biased from the random splitting of the data. 
